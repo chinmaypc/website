@@ -33,6 +33,8 @@ body{background:var(--bg);color:var(--ink);font:16px/1.65 var(--body);
 @media (max-width:760px){.langblock{gap:56px}}
 .langblock{display:flex;flex-direction:column;gap:72px}
 @media (max-width:760px){.langblock{gap:56px}}
+.langblock{display:flex;flex-direction:column;gap:72px}
+@media (max-width:760px){.langblock{gap:56px}}
 a{color:var(--accent);text-underline-offset:3px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
@@ -132,6 +134,15 @@ html[lang="de"] [data-lang="en"], html[lang="en"] [data-lang="de"]{display:none!
 .small{color:var(--muted);font-size:14px}
 
 html{scroll-behavior:smooth} body{margin:0} img{max-width:100%}
+
+html[lang="de"] [data-lang="en"], html[lang="en"] [data-lang="de"]{display:none!important}
+.navright{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.langswitch{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--surface)}
+.langswitch button{font:600 12px var(--mono);letter-spacing:.08em;border:0;background:transparent;color:var(--muted);padding:5px 11px;border-radius:999px;cursor:pointer}
+.langswitch button[aria-pressed="true"]{background:var(--accent);color:var(--bg)}
+.small{color:var(--muted);font-size:14px}
+
+html{scroll-behavior:smooth} body{margin:0} img{max-width:100%}
 </style>
 </head>
 <body>
@@ -154,13 +165,13 @@ html{scroll-behavior:smooth} body{margin:0} img{max-width:100%}
       <div class="status">Offen für Stellen in Oldenburg und der Region Bremen</div>
       <h1>Chinmay Chandratre</h1>
       <p class="role">Statistische Datenanalyse, Softwarelösungen und technische Beratung, auf Basis eines Physikstudiums (M.Sc.) und praktischer Erfahrung mit großen Simulationen und HPC.</p>
-      <div class="cta"><a class="btn primary" href="#kontakt">Kontakt aufnehmen</a><a class="btn" href="#forschung">Zur Forschung</a></div>
+      <div class="cta"><a class="btn primary" href="#kontakt">Kontakt aufnehmen</a><a class="btn" href="lebenslauf.pdf" target="_blank" rel="noopener">Lebenslauf (PDF)</a><a class="btn" href="#forschung">Zur Forschung</a></div>
     </div>
     <div data-lang="en">
       <div class="status">Open to roles in Oldenburg and the Bremen region</div>
       <h1>Chinmay Chandratre</h1>
       <p class="role">Statistical data analysis, software solutions and technical consulting, built on a physics degree (M.Sc.) and hands-on experience with large-scale simulation and HPC.</p>
-      <div class="cta"><a class="btn primary" href="#contact">Get in touch</a><a class="btn" href="#research">See my research</a></div>
+      <div class="cta"><a class="btn primary" href="#contact">Get in touch</a><a class="btn" href="lebenslauf.pdf" target="_blank" rel="noopener">CV (PDF, German)</a><a class="btn" href="#research">See my research</a></div>
     </div>
     </div>
     <div class="portrait">
@@ -203,6 +214,7 @@ html{scroll-behavior:smooth} body{margin:0} img{max-width:100%}
   <section id="kenntnisse"><div class="label">Kenntnisse</div><div class="body"><div class="skills"><div><h3>Simulation &amp; Statistik</h3><div class="chips"><span class="chip">Markov-Chain Monte Carlo</span><span class="chip">Metropolis</span><span class="chip">Large-Deviation-Theorie</span><span class="chip">Rare-Event-Sampling</span><span class="chip">Statistische Datenanalyse</span><span class="chip">Visualisierung</span><span class="chip">Automatisierung</span></div></div><div><h3>Programmierung</h3><div class="chips"><span class="chip">C</span><span class="chip">C++</span><span class="chip">Python</span><span class="chip">Bash</span></div></div><div><h3>HPC, Tools &amp; Menschen</h3><div class="chips"><span class="chip">Produktionsläufe auf Clustern</span><span class="chip">Parallelisierung</span><span class="chip">Checkpointing</span><span class="chip">Linux</span><span class="chip">Git</span><span class="chip">IT-Support</span><span class="chip">Kundenberatung</span></div></div><div><h3>Sprachen</h3><div class="chips"><span class="chip">Deutsch · fließend</span><span class="chip">Englisch · B2 (zertifiziert)</span><span class="chip">Marathi · Muttersprache</span><span class="chip">Hindi</span></div></div></div></div></section>
   <section id="kontakt"><div class="label">Kontakt</div><div class="body contact"><p>Ich kann sofort anfangen und freue mich über Ihre Nachricht zu Stellen in Datenanalyse, Softwareentwicklung oder technischer Beratung.</p>
     <div class="mailrow"><span class="mail">mail@chinmaychandratre.de</span><button class="btn copy" type="button" data-copy="Adresse kopieren" data-copied="Kopiert" data-pressc="Strg+C drücken">Adresse kopieren</button></div>
+    <p><a href="lebenslauf.pdf" target="_blank" rel="noopener">Lebenslauf (PDF)</a> · <a href="https://www.linkedin.com/in/chinmaychandratre" target="_blank" rel="noopener">LinkedIn</a></p>
     <p class="small">Oldenburg, Niedersachsen</p></div></section>
 </div>
   <div data-lang="en" class="langblock">
@@ -226,6 +238,7 @@ html{scroll-behavior:smooth} body{margin:0} img{max-width:100%}
   <section id="skills"><div class="label">Skills</div><div class="body"><div class="skills"><div><h3>Simulation &amp; statistics</h3><div class="chips"><span class="chip">Markov-chain Monte Carlo</span><span class="chip">Metropolis</span><span class="chip">Large-deviation theory</span><span class="chip">Rare-event sampling</span><span class="chip">Statistical data analysis</span><span class="chip">Visualisation</span><span class="chip">Automation</span></div></div><div><h3>Programming</h3><div class="chips"><span class="chip">C</span><span class="chip">C++</span><span class="chip">Python</span><span class="chip">Bash</span></div></div><div><h3>HPC, tools &amp; people</h3><div class="chips"><span class="chip">Cluster production runs</span><span class="chip">Parallelisation</span><span class="chip">Checkpointing</span><span class="chip">Linux</span><span class="chip">Git</span><span class="chip">IT support</span><span class="chip">Customer advice</span></div></div><div><h3>Languages</h3><div class="chips"><span class="chip">German · fluent</span><span class="chip">English · B2 (certified)</span><span class="chip">Marathi · native</span><span class="chip">Hindi</span></div></div></div></div></section>
   <section id="contact"><div class="label">Contact</div><div class="body contact"><p>I'm available to start right away. I'd be glad to hear from you about roles in data analysis, software development or technical consulting.</p>
     <div class="mailrow"><span class="mail">mail@chinmaychandratre.de</span><button class="btn copy" type="button" data-copy="Copy address" data-copied="Copied" data-pressc="Press Ctrl+C">Copy address</button></div>
+    <p><a href="lebenslauf.pdf" target="_blank" rel="noopener">CV (PDF, German)</a> · <a href="https://www.linkedin.com/in/chinmaychandratre" target="_blank" rel="noopener">LinkedIn</a></p>
     <p class="small">Oldenburg, Lower Saxony, Germany</p></div></section>
 </div>
 
